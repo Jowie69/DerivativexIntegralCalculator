@@ -38,19 +38,15 @@ inputArea.addEventListener("keydown", (e) => {
             output = `${target} color set to ${color}`;
         } else if (input.startsWith("print ")) {
             output = input.replace("print", "").trim();
-        } else if (input.startsWith("help")) {
-            output =
-                "Use the following commands:\n" +
-                "d -expression to derive-\n" +
-                "i -expression to integrate (anti-derive)-\n" +
-                "c -new text color*\n" +
-                "bg -new background color-\n" +
-                "print -text to print-\n" +
-                "clear *clears CLI*\n" +
-                "contact *prints author's discord id*\n" +
-                "facebook *opens author's discord profile*\n" +
-                "test *testing command*\n" +
-                "help *show commands list*";
+        } else if (input.startsWith("info")) {
+    output =
+        "Did you know that the derivative and the integral, two fundamental concepts in calculus, were independently developed by Isaac Newton and Gottfried Wilhelm Leibniz in the late 17th century? " +
+        "The derivative measures how a function changes at any given point, essentially giving you the slope of the curve. " +
+        "On the flip side, the integral helps you find the area under a curve, adding up tiny slices to get the total quantity. " +
+        "Here's a fun twist: the Fundamental Theorem of Calculus shows that differentiation and integration are actually inverse processes. " +
+        "So, in a way, they’re like two sides of the same mathematical coin!";
+}
+
         } else if (input.startsWith("test")) {
             output = "success";
         } else if (input.startsWith("clear")) {
